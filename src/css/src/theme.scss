@@ -1,0 +1,186 @@
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  max-height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary-100 ;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5;
+}
+
+.ht-container {
+  @apply max-w-container mx-auto px-6 sm:px-10 lg:px-14;
+}
+.ht-container-box {
+  @apply max-w-container-box mx-auto px-6 sm:px-10 lg:px-14;
+}
+.ht-container-checkout{
+  // @apply max-w-[1220px] px-3 md:px-5 mx-auto;  
+  @apply max-w-[1920px] px-4 md:px-12 mx-auto;
+}
+
+/* Headings */
+.heading-100 {
+  @apply text-5xl lg:text-6xl xl:text-7xl; /* 72px */
+}
+.heading-200 {
+  @apply text-4xl lg:text-5xl xl:text-6xl; /* 60px */
+}
+.heading-300 {
+  @apply text-3xl lg:text-4xl xl:text-5xl; /* 48px */
+}
+.heading-400 {
+  @apply text-2xl lg:text-3xl xl:text-4xl xl:leading-[150%]; /* 36px */
+}
+.heading-500 {
+  @apply text-xl lg:text-2xl xl:text-3xl; /* 30px */
+}
+/* Subheadings */
+.subheading-100 {
+  @apply text-xl xl:text-2xl; /* 24px */
+}
+.subheading-200 {
+  @apply text-lg lg:text-xl xl:text-2xl; /* 24px */
+}
+/* Paragraphs */
+.paragraph-100 {
+  @apply text-lg lg:text-xl; /* 20px */
+}
+.paragraph-200 {
+  @apply text-base lg:text-lg xl:text-xl; /* 20px */
+}
+.paragraph-300 {
+  @apply text-base xl:text-lg; /* 18px */
+}
+.paragraph-400 {
+  @apply text-sm lg:text-base; /* 16px */
+}
+.paragraph-500 {
+  @apply text-sm xl:text-base; /* 16px */
+}
+
+/* buttons sizes */
+.btn {
+  @apply transition px-5 py-2.5 lg:px-6 lg:py-3.5 gap-2 flex md:justify-center items-center rounded-full text-base lg:text-xl;
+}
+.btn-md {
+  @apply transition px-5 py-2.5 gap-2 flex md:justify-center items-center rounded-full text-base;
+}
+.btn-sm {
+  @apply flex items-center gap-2 px-4 py-2 text-xs transition rounded-full md:justify-center;
+}
+.btn-booknow {
+  @apply transition px-4 py-2.5 flex flex-col rounded-lg  md:justify-center items-center;
+}
+
+/* buttons styles */
+// solid
+.btn-solid-primary {
+  @apply font-semibold text-white bg-primary-400 border-2 border-primary-400 hover:bg-primary-300 hover:border-primary-300;
+}
+.btn-solid-primary.active {
+  @apply font-semibold text-white bg-primary-500 border-primary-500;
+}
+
+.btn-solid-white {
+  @apply font-semibold text-primary-400 bg-white border-2 border-white hover:text-primary-300;
+}
+// outlined
+.btn-outlined-primary {
+  @apply font-semibold text-primary-400 bg-white border-2 border-primary-400 hover:bg-primary-300 hover:border-primary-300 hover:text-white;
+}
+.btn-outlined-primary.active {
+  @apply font-semibold text-white bg-primary-300 border-primary-500;
+}
+.btn-outlined-transparent {
+  @apply font-semibold text-white border-2 border-white hover:bg-white hover:border-white hover:text-primary-400;
+}
+.btn-outlined-transparent.active {
+  @apply font-semibold text-primary-500 bg-white border-2 border-primary-500 hover:border-white;
+}
+.disabled {
+  @apply font-semibold text-primary-150;
+}
+
+/* special classes */
+.link-underline {
+  @apply text-primary-300 underline;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.timer > svg > circle {
+  fill: none;
+  stroke-opacity: 0.3;
+  stroke: #004d99;
+  @apply stroke-primary-600;
+  stroke-width: 8;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+.timer > svg > circle + circle {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-opacity: 1;
+}
+.timer.animatable > svg > circle + circle {
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.ht-list-none{
+    @apply list-none ml-0 mb-0;
+}
+.ht-list-none > li{
+    @apply mb-0;
+}
+// Inputs
+// Checkboxes
+input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  @apply border-2 border-primary-400;
+}
+input[type=checkbox]:checked {
+   @apply border-0 bg-primary-300;
+}
+// Radio
+input[type=radio]{
+  width: 1rem;
+  height: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  @apply border-2 border-primary-400;
+}
+input[type=radio]:checked {
+   @apply border-0 bg-primary-300;
+}

@@ -1,0 +1,84 @@
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --tw-text-opacity: 1;
+  line-height: 1.5;
+  @apply text-body;
+}
+
+a {
+  @apply text-anchorLink;
+}
+
+h1 {
+  @apply heading-100;
+}
+
+h2 {
+  @apply heading-200;
+}
+
+h3 {
+  @apply heading-400;
+}
+
+h4,
+h5,
+h6 {
+  @apply heading-500;
+}
+
+p {
+  @apply font-semibold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.wp-block-image,
+iframe {
+  @apply mb-6;
+}
+
+iframe {
+  width: 100%;
+}
+
+ul,
+ol {
+  @apply mb-5 ml-4;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+li {
+  @apply mb-2;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+.body-no-scroll-mobile{
+  @apply overflow-hidden md:overflow-auto;
+}
+.body-no-scroll{
+  @apply overflow-hidden;
+}
+.woocommerce-notices-wrapper{
+  @apply ht-container-box;
+  ul.woocommerce-error{
+    @apply text-red-600;
+  }
+}
+
